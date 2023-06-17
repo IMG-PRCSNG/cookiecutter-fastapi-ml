@@ -5,7 +5,7 @@ _config = Config()
 
 uvicorn.run(
     "{{ cookiecutter.project_slug }}.api:serve",
-    host=_config.hostname,
+    host=_config.host,
     port=_config.port,
     reload=True,
     factory=True,

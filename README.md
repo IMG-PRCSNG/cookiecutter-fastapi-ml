@@ -20,9 +20,6 @@ Generate the python project:
 cookiecutter https://github.com/IMG-PRCSNG/cookiecutter-fastapi-ml.git
 ```
 
-
-
-
 ## Inspiration
 
 - [Cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Created by the author of Cookiecutter, it is a cool place to start!

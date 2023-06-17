@@ -1,0 +1,21 @@
+name: {{ cookiecutter.project_slug }}-env
+
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip>=23
+  - setuptools>=67
+  - pip:
+    - typer[all]
+    - fastapi[all]
+    - pydantic
+    - pytest
+
+
+variables:
+  PYTHONNOUSERSITE: 1

@@ -1,0 +1,18 @@
+{
+    "full_name": "John Doe",
+    "email": "johndoe@example.org",
+    "license": [
+        "MIT license",
+        "BSD license",
+        "ISC license",
+        "Apache Software License 2.0",
+        "GNU General Public License v3",
+        "Leave it Blank"
+    ],
+    "github_username": "johndoe",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "project_name": "ML FastAPI",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '') }}",
+    "project_short_description": "Boilerplate for ML Inference projects with FastAPI",
+    "version": "0.1.0"
+}

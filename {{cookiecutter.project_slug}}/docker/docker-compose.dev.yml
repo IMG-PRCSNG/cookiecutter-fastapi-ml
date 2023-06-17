@@ -1,0 +1,12 @@
+services:
+  api:
+    image: ${REPO:-$USER}/app-dev:${VERSION:-latest}
+    build:
+      dockerfile: docker/Dockerfile
+      target: dev
+      context: "."
+      cache_from:
+        - ubuntu:22.04
+        - ${REPO:-$USER}/app-dev:${VERSION:-latest}
+    volumes:
+      - ${PWD}/:/app/

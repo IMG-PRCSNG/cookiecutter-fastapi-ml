@@ -1,0 +1,26 @@
+---
+services:
+
+  api:
+    restart: always
+    working_dir: /app
+    image: ${REPO:-$USER}/app:${VERSION:-latest}
+    build:
+      dockerfile: docker/Dockerfile
+      target: app
+      context: "."
+      cache_from:
+        - ubuntu:22.04
+        - ${REPO:-$USER}/app-dev:${VERSION:-latest}
+        - ${REPO:-$USER}/app:${VERSION:-latest}
+
+    ports:
+      - ${PORT:-9000}:9000
+
+    environment:
+      - LOCAL_UID=${UID:-1000}
+      - LOCAL_GID=${GID:-1000}
+      - HOST=0.0.0.0
+
+
+version: '3.8'
